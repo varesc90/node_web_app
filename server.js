@@ -27,13 +27,13 @@ app.use((req,res,next)=>{
 }); // Middleware
 
 
-app.use((req,res,next)=>{
-    res.render('maintenance.hbs',{
-        title:"Home Page",
-        welcome_message: "Welcome Home",
-    });
-
-});
+// app.use((req,res,next)=>{
+//     res.render('maintenance.hbs',{
+//         title:"Home Page",
+//         welcome_message: "Welcome Home",
+//     });
+//
+// });
 
 app.use(express.static(__dirname + '/public')); // Middleware
 
