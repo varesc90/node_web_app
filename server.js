@@ -2,7 +2,8 @@ const express = require('express');
 const app = express(); // create server
 const hbs = require('hbs');
 const fs = require('fs');
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 8080;
+const host = "0.0.0.0";
 app.set('view engine','hbs');
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -61,8 +62,7 @@ app.get('/bad',(req,res) => {
 });
 
 
-app.listen(port,()=>{
-    console.log(`Server is up on port ${port}`);
-}); // bind app to port (will never stop)
+app.listen(port,host);
 
+console.log(`Server is up on ${port} ${host}`);
 
